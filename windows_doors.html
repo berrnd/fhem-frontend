@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fhem-frontend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="widget_base_width" content="115">
+    <meta name="widget_base_height" content="140">
+    <meta name="gridster_disable" content="1">
+    <meta name="longpoll" content="1">
+    <meta name="debug" content="0">
+
+    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css" />
+    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.min.css" />
+    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/font-awesome.min.css" />
+    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css" />
+    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/openautomation.css" />
+    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/fhemSVG.css" />
+    <link rel="stylesheet" href="fhem-frontend.css" />
+</head>
+<body>
+    <div class="gridster">
+        <ul>
+
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="widget_menu.html"></li>
+
+            <li data-row="1" data-col="2" data-sizex="2" data-sizey="3">
+                <header>Wohnzimmer</header>
+                <div class="inline top-space-narrow">
+                    <div data-type="symbol"
+                         data-device="Wohnzimmer.FensterLinks"
+                         data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
+                         data-on-colors='["#32A054", "#AD3333", "#F2F27F"]'
+                         data-get-on='["closed", "open", "tilted"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label">Fenster links</div>
+                    <div data-type="label"
+                         data-device="Wohnzimmer.FensterLinks"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+
+                <div class="inline top-space-narrow">
+                    <div data-type="symbol"
+                         data-device="Wohnzimmer.FensterRechts"
+                         data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
+                         data-on-colors='["#32A054", "#AD3333", "#F2F27F"]'
+                         data-get-on='["closed", "open", "tilted"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label">Fenster rechts</div>
+                    <div data-type="label"
+                         data-device="Wohnzimmer.FensterRechts"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+
+                <div class="inline top-space">
+                    <div data-type="symbol"
+                         data-device="Wohnzimmer.BalkonTuere"
+                         data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
+                         data-on-colors='["#32A054", "#AD3333", "#F2F27F"]'
+                         data-get-on='["closed", "open", "tilted"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label">Balkontüre</div>
+                    <div data-type="label"
+                         data-device="Wohnzimmer.BalkonTuere"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+            </li>
+
+            <li data-row="4" data-col="2" data-sizex="2" data-sizey="2">
+                <header>Küche</header>
+                <div class="inline top-space-narrow">
+                    <div data-type="symbol"
+                         data-device="Kueche.Fenster"
+                         data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
+                         data-on-colors='["#32A054", "#AD3333", "#F2F27F"]'
+                         data-get-on='["closed", "open", "tilted"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label" ">Fenster</div>
+                    <div data-type="label"
+                         data-device="Kueche.Fenster"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+            </li>
+
+            <li data-row="1" data-col="4" data-sizex="2" data-sizey="3">
+                <header>Arbeitszimmer</header>
+                <div class="inline top-space-narrow">
+                    <div data-type="symbol"
+                         data-device="Arbeitszimmer.Fenster"
+                         data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
+                         data-on-colors='["#32A054", "#AD3333", "#F2F27F"]'
+                         data-get-on='["closed", "open", "tilted"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label">Fenster</div>
+                    <div data-type="label"
+                         data-device="Arbeitszimmer.Fenster"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+            </li>
+
+            <li data-row="4" data-col="4" data-sizex="2" data-sizey="2">
+                <header>Bad</header>
+                <div class="inline top-space-narrow">
+                    <div data-type="symbol"
+                         data-device="Bad.Fenster"
+                         data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
+                         data-on-colors='["#32A054", "#AD3333", "#F2F27F"]'
+                         data-get-on='["closed", "open", "tilted"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label">Fenster</div>
+                    <div data-type="label"
+                         data-device="Bad.Fenster"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+            </li>
+
+            <li data-row="1" data-col="6" data-sizex="2" data-sizey="3">
+                <header>Schlafzimmer</header>
+                <div class="inline top-space-narrow">
+                    <div data-type="symbol"
+                         data-device="Schlafzimmer.Fenster"
+                         data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
+                         data-on-colors='["#32A054", "#AD3333", "#F2F27F"]'
+                         data-get-on='["closed", "open", "tilted"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label">Fenster</div>
+                    <div data-type="label"
+                         data-device="Schlafzimmer.Fenster"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+
+                <div class="inline top-space">
+                    <div data-type="symbol"
+                         data-device="Schlafzimmer.BalkonTuere"
+                         data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
+                         data-on-colors='["#32A054", "#AD3333", "#F2F27F"]'
+                         data-get-on='["closed", "open", "tilted"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label">Balkontüre</div>
+                    <div data-type="label"
+                         data-device="Schlafzimmer.BalkonTuere"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+            </li>
+
+            <li data-row="4" data-col="6" data-sizex="2" data-sizey="2">
+                <header>Flur</header>
+                <div class="inline top-space-narrow">
+                    <div data-type="symbol"
+                         data-device="Flur.Wohnungstuere"
+                         data-icons='["oa-fts_door bold", "oa-fts_door_open bold"]'
+                         data-on-colors='["#32A054", "#AD3333"]'
+                         data-get-on='["closed", "open"]'
+                         class="bottom-space-narrow">
+                    </div>
+
+                    <div data-type="label">Wohnungstuere</div>
+                    <div data-type="label"
+                         data-device="Flur.Wohnungstuere"
+                         data-get="state"
+                         class="timestamp timestamp-moment">
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <script type="text/javascript" src="vendor/components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.js"></script>
+    <script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
+    <script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.min.js"></script>
+    <script type="text/javascript" src="vendor/moment/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="fhem-frontend.js"></script>
+</body>
+</html>

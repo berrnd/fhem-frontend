@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>fhem_frontend</Name>
+    <ProjectGuid>cda1b5a4-b8c6-4328-a76b-5bcff2fa725b</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>fhem-frontend</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="fhem-frontend.css" />
+    <Content Include="fhem-frontend.js" />
+    <Content Include="colors.txt" />
+    <Content Include="composer.json" />
+    <Content Include="index.html" />
+    <Content Include="cameras.html" />
+    <Content Include="climate.html" />
+    <Content Include="lighting.html" />
+    <Content Include="media.html" />
+    <Content Include="network.html" />
+    <Content Include="shutters.html" />
+    <Content Include="windows_doors.html" />
+    <Content Include="widget_menu.html" />
+  </ItemGroup>
+</Project>

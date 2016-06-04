@@ -1,0 +1,6 @@
+{
+    "require": {
+        "components/jquery": "2.2.4",
+        "moment/moment": "^2.13"
+    }
+}
