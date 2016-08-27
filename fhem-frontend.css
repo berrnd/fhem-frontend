@@ -1,13 +1,13 @@
 ﻿.top-space-narrow {
-    margin-top: -2px !important;
+	margin-top: -2px !important;
 }
 
 .bottom-space-narrow {
-    margin-bottom: -10px !important;
+	margin-bottom: -10px !important;
 }
 
 .timestamp-moment {
-    font-style: italic;
-    font-size: 80%;
-    color: #8C8C8C;
+	font-style: italic;
+	font-size: 80%;
+	color: #8C8C8C;
 }

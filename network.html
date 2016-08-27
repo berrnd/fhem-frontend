@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>fhem-frontend</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>fhem-frontend</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="widget_base_width" content="115">
-    <meta name="widget_base_height" content="140">
-    <meta name="gridster_disable" content="1">
-    <meta name="longpoll" content="1">
-    <meta name="debug" content="0">
+	<meta name="widget_base_width" content="115">
+	<meta name="widget_base_height" content="140">
+	<meta name="gridster_disable" content="1">
+	<meta name="longpoll" content="1">
+	<meta name="debug" content="0">
 
-    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css" />
-    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.min.css" />
-    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/font-awesome.min.css" />
-    <link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css" />
-    <link rel="stylesheet" href="fhem-frontend.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.min.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/font-awesome.min.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css" />
+	<link rel="stylesheet" href="fhem-frontend.css" />
 </head>
 <body>
-    <div class="gridster">
-        <ul>
+	<div class="gridster">
+		<ul>
 
-            <li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="widget_menu.html"></li>
+			<li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="widget_menu.html"></li>
 
-            <li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
-                <header>bbfb</header>
-                <div class="inline top-space-narrow">
-                    <div data-type="label" class="cell">WLAN</div>
-                    <div data-type="switch"
-                         data-device="Flur.bbfb"
-                         data-get="box_wlan_2.4GHz"
-                         data-set-on="wlan on"
-                         data-set-off="wlan off"
-                         data-get-on="on"
-                         data-get-off="off"
-                         data-icon="fa-power-off"
-                         data-background-icon=""
-                         data-on-background-color="#32A054"
-                         data-off-background-color="#AD3333">
-                    </div>
-                    <div data-type="label" class="cell top-space">G&auml;ste WLAN</div>
-                    <div data-type="switch"
-                         data-device="Flur.bbfb"
-                         data-get="box_guestWlan"
-                         data-set-on="guestWlan on"
-                         data-set-off="guestWlan off"
-                         data-get-on="on"
-                         data-get-off="off"
-                         data-icon="fa-power-off"
-                         data-background-icon=""
-                         data-on-background-color="#32A054"
-                         data-off-background-color="#AD3333">
-                    </div>
-                </div>
-            </li>
+			<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
+				<header>bbfb</header>
+				<div class="inline top-space-narrow">
+					<div data-type="label" class="cell">WLAN</div>
+					<div data-type="switch"
+						 data-device="Flur.bbfb"
+						 data-get="box_wlan_2.4GHz"
+						 data-set-on="wlan on"
+						 data-set-off="wlan off"
+						 data-get-on="on"
+						 data-get-off="off"
+						 data-icon="fa-power-off"
+						 data-background-icon=""
+						 data-on-background-color="#32A054"
+						 data-off-background-color="#AD3333">
+					</div>
+					<div data-type="label" class="cell top-space">G&auml;ste WLAN</div>
+					<div data-type="switch"
+						 data-device="Flur.bbfb"
+						 data-get="box_guestWlan"
+						 data-set-on="guestWlan on"
+						 data-set-off="guestWlan off"
+						 data-get-on="on"
+						 data-get-off="off"
+						 data-icon="fa-power-off"
+						 data-background-icon=""
+						 data-on-background-color="#32A054"
+						 data-off-background-color="#AD3333">
+					</div>
+				</div>
+			</li>
 
-        </ul>
-    </div>
-    <script type="text/javascript" src="vendor/components/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.js"></script>
-    <script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
-    <script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.min.js"></script>
-    <script type="text/javascript" src="vendor/moment/moment/min/moment.min.js"></script>
-    <script type="text/javascript" src="fhem-frontend.js"></script>
+		</ul>
+	</div>
+	<script type="text/javascript" src="vendor/components/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.js"></script>
+	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
+	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.min.js"></script>
+	<script type="text/javascript" src="vendor/moment/moment/min/moment.min.js"></script>
+	<script type="text/javascript" src="fhem-frontend.js"></script>
 </body>
 </html>
