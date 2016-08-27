@@ -3,22 +3,20 @@
 <head>
 	<title>fhem-frontend</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<meta name="widget_base_width" content="115">
-	<meta name="widget_base_height" content="140">
+    <meta name="widget_base_width" content="110">
+    <meta name="widget_base_height" content="130">
 	<meta name="gridster_disable" content="1">
 	<meta name="longpoll" content="1">
 	<meta name="debug" content="0">
 
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/font-awesome.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/openautomation.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/fhemSVG.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/css/fhem-tablet-ui.min.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/font-awesome.min.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/openautomation.css" />
+	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/fhemSVG.css" />
 	<link rel="stylesheet" href="fhem-frontend.css" />
 </head>
 <body>
@@ -27,7 +25,7 @@
 
 			<li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="widget_menu.html"></li>
 
-			<li data-row="1" data-col="2" data-sizex="2" data-sizey="3">
+			<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
 				<header>Wohnzimmer</header>
 				<div class="inline top-space-narrow">
 					<div data-type="symbol"
@@ -39,11 +37,6 @@
 					</div>
 
 					<div data-type="label">Fenster links</div>
-					<div data-type="label"
-						 data-device="Wohnzimmer.FensterLinks"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 
 				<div class="inline top-space-narrow">
@@ -56,11 +49,6 @@
 					</div>
 
 					<div data-type="label">Fenster rechts</div>
-					<div data-type="label"
-						 data-device="Wohnzimmer.FensterRechts"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 
 				<div class="inline top-space">
@@ -73,15 +61,10 @@
 					</div>
 
 					<div data-type="label">Balkontüre</div>
-					<div data-type="label"
-						 data-device="Wohnzimmer.BalkonTuere"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 			</li>
 
-			<li data-row="4" data-col="2" data-sizex="2" data-sizey="2">
+			<li data-row="4" data-col="2" data-sizex="2" data-sizey="1">
 				<header>Küche</header>
 				<div class="inline top-space-narrow">
 					<div data-type="symbol"
@@ -93,15 +76,10 @@
 					</div>
 
 					<div data-type="label" ">Fenster</div>
-					<div data-type="label"
-						 data-device="Kueche.Fenster"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 			</li>
 
-			<li data-row="1" data-col="4" data-sizex="2" data-sizey="3">
+			<li data-row="1" data-col="4" data-sizex="2" data-sizey="2">
 				<header>Arbeitszimmer</header>
 				<div class="inline top-space-narrow">
 					<div data-type="symbol"
@@ -113,15 +91,10 @@
 					</div>
 
 					<div data-type="label">Fenster</div>
-					<div data-type="label"
-						 data-device="Arbeitszimmer.Fenster"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 			</li>
 
-			<li data-row="4" data-col="4" data-sizex="2" data-sizey="2">
+			<li data-row="4" data-col="4" data-sizex="2" data-sizey="1">
 				<header>Bad</header>
 				<div class="inline top-space-narrow">
 					<div data-type="symbol"
@@ -133,15 +106,10 @@
 					</div>
 
 					<div data-type="label">Fenster</div>
-					<div data-type="label"
-						 data-device="Bad.Fenster"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 			</li>
 
-			<li data-row="1" data-col="6" data-sizex="2" data-sizey="3">
+			<li data-row="1" data-col="6" data-sizex="2" data-sizey="2">
 				<header>Schlafzimmer</header>
 				<div class="inline top-space-narrow">
 					<div data-type="symbol"
@@ -153,14 +121,9 @@
 					</div>
 
 					<div data-type="label">Fenster</div>
-					<div data-type="label"
-						 data-device="Schlafzimmer.Fenster"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 
-				<div class="inline top-space">
+				<div class="inline top-space-narrow">
 					<div data-type="symbol"
 						 data-device="Schlafzimmer.BalkonTuere"
 						 data-icons='["oa-fts_window_1w bold", "oa-fts_window_1w_open bold", "oa-fts_window_1w_tilt bold"]'
@@ -170,15 +133,10 @@
 					</div>
 
 					<div data-type="label">Balkontüre</div>
-					<div data-type="label"
-						 data-device="Schlafzimmer.BalkonTuere"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 			</li>
 
-			<li data-row="4" data-col="6" data-sizex="2" data-sizey="2">
+			<li data-row="4" data-col="6" data-sizex="2" data-sizey="1">
 				<header>Flur</header>
 				<div class="inline top-space-narrow">
 					<div data-type="symbol"
@@ -190,21 +148,15 @@
 					</div>
 
 					<div data-type="label">Wohnungstuere</div>
-					<div data-type="label"
-						 data-device="Flur.Wohnungstuere"
-						 data-get="state"
-						 class="timestamp timestamp-moment">
-					</div>
 				</div>
 			</li>
 
 		</ul>
 	</div>
-	<script type="text/javascript" src="vendor/components/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.min.js"></script>
-	<script type="text/javascript" src="vendor/moment/moment/min/moment.min.js"></script>
+	<script type="text/javascript" src="/fhem/pgm2/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.js"></script>
+	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.js"></script>
+	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/js/fhem-tablet-ui.js"></script>
 	<script type="text/javascript" src="fhem-frontend.js"></script>
 </body>
 </html>
