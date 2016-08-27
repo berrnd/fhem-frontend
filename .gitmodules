@@ -1,0 +1,4 @@
+[submodule "vendor_unmanaged/fhem-tablet-ui"]
+	path = vendor_unmanaged/fhem-tablet-ui
+	url = https://github.com/knowthelist/fhem-tablet-ui.git
+	branch = eval
