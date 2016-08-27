@@ -25,15 +25,55 @@
 			<li data-row="1" data-col="8" data-sizex="1" data-sizey="4" data-template="widget_menu_right.html"></li>
 
 			<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
-				<header>Wohnungst&uuml;re T&uuml;rspion</header>
+				<header>Wohnzimmer</header>
 				<div class="inline top-space-narrow">
-					<div data-type="image"
-						 data-device="Flur.Tuerspion"
-						 data-get="last"
-						 data-path="/fhem/snapshots/"
-						 data-size="100%"
-						 data-refresh="1"
-						 class="cell nocache">
+					<div data-type="swiper" data-height="500px" data-width="700px" class="">
+						<ul>
+							<li>
+								<div data-type="highchart"
+									 data-device="Wohnzimmer.Wandthermostat_Weather"
+									 data-logdevice="Log.Database"
+									 data-columnspec='Wohnzimmer.Wandthermostat_Weather:temperature'
+									 data-linenames="Wohnzimmer Temperatur"
+									 data-linetypes="line"
+									 data-linesteps="true"
+									 data-yaxis="1"
+									 data-xunit="Zeitraum"
+									 data-yunit="Temperatur"
+									 data-yopposites="true"
+									 data-daysago="7"
+									 data-scroll="true"
+									 data-range="true"
+									 data-minvalue="15"
+									 data-maxvalue="15"
+									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
+									 data-legendalign="bottom"
+									 class="noticks">
+								</div>
+							</li>
+							<li>
+								<div data-type="highchart"
+									 data-device="Wohnzimmer.Wandthermostat_Weather"
+									 data-logdevice="Log.Database"
+									 data-columnspec='Wohnzimmer.Wandthermostat_Weather:humidity'
+									 data-linenames="Wohnzimmer Luftfeuchtigkeit"
+									 data-linetypes="line"
+									 data-linesteps="true"
+									 data-yaxis="1"
+									 data-xunit="Zeitraum"
+									 data-yunit="Luftfeuchtigkeit"
+									 data-yopposites="true"
+									 data-daysago="7"
+									 data-scroll="true"
+									 data-range="true"
+									 data-minvalue="25"
+									 data-maxvalue="60"
+									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
+									 data-legendalign="bottom"
+									 class="noticks">
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</li>
@@ -45,15 +85,5 @@
 	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.js"></script>
 	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/js/fhem-tablet-ui.js"></script>
 	<script type="text/javascript" src="fhem-frontend.js"></script>
-
-	<script>
-		$(function ()
-		{
-			setInterval(function ()
-			{
-				ftui.setFhemStatus('get Flur.Tuerspion image');
-			}, 1000);
-		});
-	</script>
 </body>
 </html>

@@ -17,10 +17,18 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="room_wohnung.html" />
+    <Content Include="room_schlafzimmer.html" />
+    <Content Include="room_arbeitszimmer.html" />
+    <Content Include="room_kueche.html" />
+    <Content Include="room_bad.html" />
+    <Content Include="room_flur.html" />
+    <Content Include="room_aussen.html" />
+    <Content Include="room_keller.html" />
+    <Content Include="room_wohnzimmer.html" />
     <Content Include="fhem-frontend.css" />
     <Content Include="fhem-frontend.js" />
     <Content Include="colors.txt" />
-    <Content Include="composer.json" />
     <Content Include="index.html" />
     <Content Include="cameras.html" />
     <Content Include="climate.html" />
@@ -28,7 +36,8 @@
     <Content Include="media.html" />
     <Content Include="network.html" />
     <Content Include="shutters.html" />
+    <Content Include="widget_menu_right.html" />
     <Content Include="windows_doors.html" />
-    <Content Include="widget_menu.html" />
+    <Content Include="widget_menu_left.html" />
   </ItemGroup>
 </Project>
