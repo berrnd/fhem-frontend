@@ -1,28 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>fhem-frontend</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-	<meta name="widget_base_width" content="115">
-	<meta name="widget_base_height" content="130">
-	<meta name="gridster_disable" content="1">
-	<meta name="longpoll" content="1">
-	<meta name="debug" content="0">
-
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/css/fhem-tablet-ui.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/font-awesome.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.css" />
-	<link rel="stylesheet" href="fhem-frontend.css" />
+	<?ftui-inc="layout/head.ftui.html" ?>
 </head>
 <body>
 	<div class="gridster">
 		<ul>
 
-			<li data-row="1" data-col="1" data-sizex="1" data-sizey="4" data-template="widget_menu_left.html"></li>
-			<li data-row="1" data-col="8" data-sizex="1" data-sizey="4" data-template="widget_menu_right.html"></li>
+			<?ftui-inc="layout/menu.ftui.html" ?>
 
 			<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
 				<header>Flur</header>

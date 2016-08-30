@@ -17,27 +17,33 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="room_wohnung.html" />
-    <Content Include="room_schlafzimmer.html" />
-    <Content Include="room_arbeitszimmer.html" />
-    <Content Include="room_kueche.html" />
-    <Content Include="room_bad.html" />
-    <Content Include="room_flur.html" />
-    <Content Include="room_aussen.html" />
-    <Content Include="room_keller.html" />
-    <Content Include="room_wohnzimmer.html" />
+    <Content Include="elements\link-button.ftui.html" />
+    <Content Include="redirect.js" />
+    <Content Include="layout\before-end-body.ftui.html" />
+    <Content Include="layout\menu.ftui.html" />
+    <Content Include="layout\head.ftui.html" />
+    <Content Include="room_wohnung.ftui.html" />
+    <Content Include="room_schlafzimmer.ftui.html" />
+    <Content Include="room_arbeitszimmer.ftui.html" />
+    <Content Include="room_kueche.ftui.html" />
+    <Content Include="room_bad.ftui.html" />
+    <Content Include="room_flur.ftui.html" />
+    <Content Include="room_aussen.ftui.html" />
+    <Content Include="room_keller.ftui.html" />
+    <Content Include="room_wohnzimmer.ftui.html" />
     <Content Include="fhem-frontend.css" />
     <Content Include="fhem-frontend.js" />
-    <Content Include="colors.txt" />
-    <Content Include="index.html" />
-    <Content Include="cameras.html" />
-    <Content Include="climate.html" />
-    <Content Include="lighting.html" />
-    <Content Include="media.html" />
-    <Content Include="network.html" />
-    <Content Include="shutters.html" />
-    <Content Include="widget_menu_right.html" />
-    <Content Include="windows_doors.html" />
-    <Content Include="widget_menu_left.html" />
+    <Content Include="dashboard.ftui.html" />
+    <Content Include="cameras.ftui.html" />
+    <Content Include="climate.ftui.html" />
+    <Content Include="lighting.ftui.html" />
+    <Content Include="media.ftui.html" />
+    <Content Include="network.ftui.html" />
+    <Content Include="shutters.ftui.html" />
+    <Content Include="windows_doors.ftui.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="layout\" />
+    <Folder Include="elements\" />
   </ItemGroup>
 </Project>

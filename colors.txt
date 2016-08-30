@@ -1,6 +1,0 @@
-﻿Orange #AA6900
-Red #AD3333
-Green #32A054
-Blue #6699FF
-Gray #8C8C8C
-Yellow #F2F27F

@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>fhem-frontend</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-	<meta name="widget_base_width" content="115">
-	<meta name="widget_base_height" content="130">
-	<meta name="gridster_disable" content="1">
-	<meta name="longpoll" content="1">
-	<meta name="debug" content="0">
-
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/css/fhem-tablet-ui.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/font-awesome.min.css" />
-	<link rel="stylesheet" href="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.css" />
-	<link rel="stylesheet" href="fhem-frontend.css" />
+	<?ftui-inc="layout/head.ftui.html" ?>
 </head>
 <body>
 	<div class="gridster">
 		<ul>
 
-			<li data-row="1" data-col="1" data-sizex="1" data-sizey="4" data-template="widget_menu_left.html"></li>
-			<li data-row="1" data-col="8" data-sizex="1" data-sizey="4" data-template="widget_menu_right.html"></li>
+			<?ftui-inc="layout/menu.ftui.html" ?>
 
 			<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
-				<header>Schlafzimmer</header>
+				<header>K&uuml;che</header>
 				<div class="inline top-space-narrow">
 					<div data-type="swiper" data-height="500px" data-width="700px" class="">
 						<ul>
 							<li>
 								<div data-type="highchart"
-									 data-device="Schlafzimmer.Wandthermostat_Weather"
+									 data-device="Kueche.Wandthermostat_Weather"
 									 data-logdevice="Log.Database"
-									 data-columnspec='Schlafzimmer.Wandthermostat_Weather:temperature'
-									 data-linenames="Schlafzimmer Temperatur"
+									 data-columnspec='Kueche.Wandthermostat_Weather:temperature'
+									 data-linenames="K&uuml;che Temperatur"
 									 data-linetypes="line"
 									 data-linesteps="true"
 									 data-yaxis="1"
@@ -53,10 +38,10 @@
 							</li>
 							<li>
 								<div data-type="highchart"
-									 data-device="Schlafzimmer.Wandthermostat_Weather"
+									 data-device="Kueche.Wandthermostat_Weather"
 									 data-logdevice="Log.Database"
-									 data-columnspec='Schlafzimmer.Wandthermostat_Weather:humidity'
-									 data-linenames="Schlafzimmer Luftfeuchtigkeit"
+									 data-columnspec='Kueche.Wandthermostat_Weather:humidity'
+									 data-linenames="K&uuml;che Luftfeuchtigkeit"
 									 data-linetypes="line"
 									 data-linesteps="true"
 									 data-yaxis="1"
@@ -68,6 +53,28 @@
 									 data-range="true"
 									 data-minvalue="25"
 									 data-maxvalue="60"
+									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
+									 data-legendalign="bottom"
+									 class="noticks">
+								</div>
+							</li>
+							<li>
+								<div data-type="highchart"
+									 data-device="Kueche.ThermoSensorKuehlschrank"
+									 data-logdevice="Log.Database"
+									 data-columnspec='Kueche.ThermoSensorKuehlschrank:temperature'
+									 data-linenames="K&uuml;che Temperatur K&uuml;hlschrank"
+									 data-linetypes="line"
+									 data-linesteps="true"
+									 data-yaxis="1"
+									 data-xunit="Zeitraum"
+									 data-yunit="Temperatur"
+									 data-yopposites="true"
+									 data-daysago="7"
+									 data-scroll="true"
+									 data-range="true"
+									 data-minvalue="0"
+									 data-maxvalue="15"
 									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
 									 data-legendalign="bottom"
 									 class="noticks">
