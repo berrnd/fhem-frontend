@@ -3,40 +3,23 @@
 <head>
 	<?ftui-inc="layout/head.ftui.html" ?>
 </head>
-<body>
-	<div class="gridster">
-		<ul>
+<body data-page-id="cameras">
+	<div id="site-wrapper">
+		<div class="gridster">
+			<ul>
 
-			<?ftui-inc="layout/menu.ftui.html" ?>
+				<?ftui-inc="layout/menu.ftui.html" ?>
 
-			<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
-				<header>Wohnungst&uuml;re T&uuml;rspion</header>
-				<div class="inline top-space-narrow">
-					<div data-type="image"
-						 data-device="Flur.Tuerspion"
-						 data-get="last"
-						 data-path="/fhem/snapshots/"
-						 data-size="100%"
-						 data-refresh="1"
-						 class="cell nocache">
+				<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
+					<header>Kameras</header>
+					<div class="inline top-space-narrow">
+						<?ftui-inc="elements/camera-view.ftui.html" device="Flur.Tuerspion" headline="T&uuml;rspion" ?>
 					</div>
-				</div>
-			</li>
+				</li>
 
-		</ul>
+			</ul>
+		</div>
 	</div>
-	<script type="text/javascript" src="/fhem/pgm2/jquery.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/js/fhem-tablet-ui.js"></script>
-	<script type="text/javascript" src="fhem-frontend.js"></script>
-
-	<script>
-		$(function () {
-			setInterval(function () {
-				ftui.setFhemStatus('get Flur.Tuerspion image');
-			}, 1000);
-		});
-	</script>
+	<?ftui-inc="layout/before-end-body.ftui.html" ?>
 </body>
 </html>

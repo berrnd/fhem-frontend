@@ -3,72 +3,32 @@
 <head>
 	<?ftui-inc="layout/head.ftui.html" ?>
 </head>
-<body>
-	<div class="gridster">
-		<ul>
+<body data-page-id="room_wohnung">
+	<div id="site-wrapper">
+		<div class="gridster">
+			<ul>
 
-			<?ftui-inc="layout/menu.ftui.html" ?>
+				<?ftui-inc="layout/menu.ftui.html" ?>
 
-			<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
-				<header>Wohnung</header>
-				<div class="inline top-space-narrow">
-					<div data-type="swiper" data-height="500px" data-width="700px" class="">
-						<ul>
-							<li>
-								<div data-type="highchart"
-									 data-device="Wohnzimmer.Wandthermostat_Weather,Schlafzimmer.Wandthermostat_Weather,Arbeitszimmer.Wandthermostat_Weather,Kueche.Wandthermostat_Weather,Bad.Wandthermostat_Weather,Flur.Wandthermostat_Weather"
-									 data-logdevice="Log.Database"
-									 data-columnspec='Wohnzimmer.Wandthermostat_Weather:temperature Schlafzimmer.Wandthermostat_Weather:temperature Arbeitszimmer.Wandthermostat_Weather:temperature Kueche.Wandthermostat_Weather:temperature Bad.Wandthermostat_Weather:temperature Flur.Wandthermostat_Weather:temperature'
-									 data-linenames="Wohnzimmer,Schlafzimmer,Arbeitszimmer,K&uuml;che,Bad,Flur"
-									 data-linetypes="line,line,line,line,line,line"
-									 data-linesteps="true,true,true,true,true,true"
-									 data-yaxis="1,1,1,1,1,1"
-									 data-xunit="Zeitraum"
-									 data-yunit="Temperatur"
-									 data-yopposites="true"
-									 data-daysago="7"
-									 data-scroll="true"
-									 data-range="true"
-									 data-minvalue="15"
-									 data-maxvalue="15"
-									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
-									 data-legendalign="bottom"
-									 class="noticks">
-								</div>
-							</li>
-							<li>
-								<div data-type="highchart"
-									 data-device="Wohnzimmer.Wandthermostat_Weather,Schlafzimmer.Wandthermostat_Weather,Arbeitszimmer.Wandthermostat_Weather,Kueche.Wandthermostat_Weather,Bad.Wandthermostat_Weather,Flur.Wandthermostat_Weather"
-									 data-logdevice="Log.Database"
-									 data-columnspec='Wohnzimmer.Wandthermostat_Weather:humidity Schlafzimmer.Wandthermostat_Weather:humidity Arbeitszimmer.Wandthermostat_Weather:humidity Kueche.Wandthermostat_Weather:humidity Bad.Wandthermostat_Weather:humidity Flur.Wandthermostat_Weather:humidity'
-									 data-linenames="Wohnzimmer,Schlafzimmer,Arbeitszimmer,K&uuml;che,Bad,Flur"
-									 data-linetypes="line,line,line,line,line,line"
-									 data-linesteps="true,true,true,true,true,true"
-									 data-yaxis="1,1,1,1,1,1"
-									 data-xunit="Zeitraum"
-									 data-yunit="Luftfeuchtigkeit"
-									 data-yopposites="true"
-									 data-daysago="7"
-									 data-scroll="true"
-									 data-range="true"
-									 data-minvalue="25"
-									 data-maxvalue="60"
-									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
-									 data-legendalign="bottom"
-									 class="noticks">
-								</div>
-							</li>
-						</ul>
+				<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
+					<header>Wohnung</header>
+					<div class="inline top-space-narrow">
+						<div data-type="swiper" data-height="500px" data-width="700px" class="">
+							<ul>
+								<li>
+									<?ftui-inc="elements/chart.ftui.html" device="Kueche.Wandthermostat_Weather,Bad.Wandthermostat_Weather,Flur.Wandthermostat_Weather,Wohnzimmer.Wandthermostat_Weather,Schlafzimmer.Wandthermostat_Weather,Arbeitszimmer.Wandthermostat_Weather" column-spec="Kueche.Wandthermostat_Weather:temperature Bad.Wandthermostat_Weather:temperature Flur.Wandthermostat_Weather:temperature Wohnzimmer.Wandthermostat_Weather:temperature Schlafzimmer.Wandthermostat_Weather:temperature Arbeitszimmer.Wandthermostat_Weather:temperature" line-names="K&uuml;che,Bad,Flur,Wohnzimmer,Schlafzimmer,Arbeitszimmer" yunit="Temperatur" value-min="15" value-max="15" ?>
+								</li>
+								<li>
+									<?ftui-inc="elements/chart.ftui.html" device="Kueche.Wandthermostat_Weather,Bad.Wandthermostat_Weather,Flur.Wandthermostat_Weather,Wohnzimmer.Wandthermostat_Weather,Schlafzimmer.Wandthermostat_Weather,Arbeitszimmer.Wandthermostat_Weather" column-spec="Kueche.Wandthermostat_Weather:humidity Bad.Wandthermostat_Weather:humidity Flur.Wandthermostat_Weather:humidity Wohnzimmer.Wandthermostat_Weather:humidity Schlafzimmer.Wandthermostat_Weather:humidity Arbeitszimmer.Wandthermostat_Weather:humidity" line-names="K&uuml;che,Bad,Flur,Wohnzimmer,Schlafzimmer,Arbeitszimmer" yunit="Luftfeuchtigkeit" value-min="25" value-max="60" ?>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-			</li>
+				</li>
 
-		</ul>
+			</ul>
+		</div>
 	</div>
-	<script type="text/javascript" src="/fhem/pgm2/jquery.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/js/fhem-tablet-ui.js"></script>
-	<script type="text/javascript" src="fhem-frontend.js"></script>
+	<?ftui-inc="layout/before-end-body.ftui.html" ?>
 </body>
 </html>

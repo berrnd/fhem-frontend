@@ -3,108 +3,38 @@
 <head>
 	<?ftui-inc="layout/head.ftui.html" ?>
 </head>
-<body>
-	<div class="gridster">
-		<ul>
+<body data-page-id="shutters">
+	<div id="site-wrapper">
+		<div class="gridster">
+			<ul>
 
-			<?ftui-inc="layout/menu.ftui.html" ?>
+				<?ftui-inc="layout/menu.ftui.html" ?>
 
-			<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
-				<header>Wohnzimmer</header>
-				<div class="inline top-space-narrow">
-					<div data-type="label" class="cell">Fenster</div>
-					<div data-type="slider"
-						 data-device="Wohnzimmer.RolladenFenster"
-						 data-get="position"
-						 data-set="position"
-						 data-min="0"
-						 data-max="100"
-						 data-value="true"
-						 class="negated tap">
-					</div>
-				</div>
+				<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
+					<header>Wohnzimmer</header>
+					<?ftui-inc="elements/shutter-control.ftui.html" device="Wohnzimmer.RolladenFenster" headline="Fenster" ?>
+					<?ftui-inc="elements/shutter-control.ftui.html" device="Wohnzimmer.RolladenBalkon" headline="Balkon" ?>
+				</li>
 
-				<div class="inline top-space-narrow">
-					<div data-type="label" class="cell">Balkon</div>
-					<div data-type="slider"
-						 data-device="Wohnzimmer.RolladenBalkon"
-						 data-get="position"
-						 data-set="position"
-						 data-min="0"
-						 data-max="100"
-						 data-value="true"
-						 class="negated tap">
-					</div>
-				</div>
-			</li>
+				<li data-row="1" data-col="6" data-sizex="2" data-sizey="2">
+					<header>Schlafzimmer</header>
+					<?ftui-inc="elements/shutter-control.ftui.html" device="Schlafzimmer.RolladenFenster" headline="Fenster" ?>
+					<?ftui-inc="elements/shutter-control.ftui.html" device="Schlafzimmer.RolladenBalkon" headline="Balkon" ?>
+				</li>
 
-			<li data-row="1" data-col="6" data-sizex="2" data-sizey="2">
-				<header>Schlafzimmer</header>
-				<div class="inline top-space-narrow">
-					<div data-type="label" class="cell">Fenster</div>
-					<div data-type="slider"
-						 data-device="Schlafzimmer.RolladenFenster"
-						 data-get="position"
-						 data-set="position"
-						 data-min="0"
-						 data-max="100"
-						 data-value="true"
-						 class="negated tap">
-					</div>
-				</div>
+				<li data-row="1" data-col="4" data-sizex="2" data-sizey="2">
+					<header>Arbeitszimmer</header>
+					<?ftui-inc="elements/shutter-control.ftui.html" device="Arbeitszimmer.Rolladen" headline="Fenster" ?>
+				</li>
 
-				<div class="inline top-space-narrow">
-					<div data-type="label" class="cell">Balkon</div>
-					<div data-type="slider"
-						 data-device="Schlafzimmer.RolladenBalkon"
-						 data-get="position"
-						 data-set="position"
-						 data-min="0"
-						 data-max="100"
-						 data-value="true"
-						 class="negated tap">
-					</div>
-				</div>
-			</li>
+				<li data-row="3" data-col="2" data-sizex="2" data-sizey="2">
+					<header>Küche</header>
+					<?ftui-inc="elements/shutter-control.ftui.html" device="Kueche.Rolladen" headline="Fenster" ?>
+				</li>
 
-			<li data-row="1" data-col="4" data-sizex="2" data-sizey="2">
-				<header>Arbeitszimmer</header>
-				<div class="inline top-space-narrow">
-					<div data-type="label" class="cell">Balkon</div>
-					<div data-type="slider"
-						 data-device="Arbeitszimmer.Rolladen"
-						 data-get="position"
-						 data-set="position"
-						 data-min="0"
-						 data-max="100"
-						 data-value="true"
-						 class="negated tap">
-					</div>
-				</div>
-			</li>
-
-			<li data-row="3" data-col="2" data-sizex="2" data-sizey="2">
-				<header>Küche</header>
-				<div class="inline top-space-narrow">
-					<div data-type="label" class="cell">Balkon</div>
-					<div data-type="slider"
-						 data-device="Kueche.Rolladen"
-						 data-get="position"
-						 data-set="position"
-						 data-min="0"
-						 data-max="100"
-						 data-value="true"
-						 class="negated tap">
-					</div>
-				</div>
-			</li>
-
-		</ul>
+			</ul>
+		</div>
 	</div>
-	<script type="text/javascript" src="/fhem/pgm2/jquery.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/js/fhem-tablet-ui.js"></script>
-	<script type="text/javascript" src="fhem-frontend.js"></script>
-</body>
+	<?ftui-inc="layout/before-end-body.ftui.html" ?>
+</body>>
 </html>

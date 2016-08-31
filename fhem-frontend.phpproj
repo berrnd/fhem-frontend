@@ -17,7 +17,16 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="elements\link-button.ftui.html" />
+    <Content Include="elements\chart.ftui.html" />
+    <Content Include="elements\camera-view.ftui.html" />
+    <Content Include="elements\volume-control.ftui.html" />
+    <Content Include="elements\shutter-control.ftui.html" />
+    <Content Include="elements\on-off-button.ftui.html" />
+    <Content Include="elements\window-door-indicator.ftui.html" />
+    <Content Include="widgets\wifi-control.ftui.html" />
+    <Content Include="widgets\presence.ftui.html" />
+    <Content Include="elements\thermo-hygro.ftui.html" />
+    <Content Include="elements\command-button.ftui.html" />
     <Content Include="redirect.js" />
     <Content Include="layout\before-end-body.ftui.html" />
     <Content Include="layout\menu.ftui.html" />
@@ -45,5 +54,6 @@
   <ItemGroup>
     <Folder Include="layout\" />
     <Folder Include="elements\" />
+    <Folder Include="widgets\" />
   </ItemGroup>
 </Project>

@@ -3,94 +3,32 @@
 <head>
 	<?ftui-inc="layout/head.ftui.html" ?>
 </head>
-<body>
-	<div class="gridster">
-		<ul>
+<body data-page-id="room_kueche">
+	<div id="site-wrapper">
+		<div class="gridster">
+			<ul>
 
-			<?ftui-inc="layout/menu.ftui.html" ?>
+				<?ftui-inc="layout/menu.ftui.html" ?>
 
-			<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
-				<header>K&uuml;che</header>
-				<div class="inline top-space-narrow">
-					<div data-type="swiper" data-height="500px" data-width="700px" class="">
-						<ul>
-							<li>
-								<div data-type="highchart"
-									 data-device="Kueche.Wandthermostat_Weather"
-									 data-logdevice="Log.Database"
-									 data-columnspec='Kueche.Wandthermostat_Weather:temperature'
-									 data-linenames="K&uuml;che Temperatur"
-									 data-linetypes="line"
-									 data-linesteps="true"
-									 data-yaxis="1"
-									 data-xunit="Zeitraum"
-									 data-yunit="Temperatur"
-									 data-yopposites="true"
-									 data-daysago="7"
-									 data-scroll="true"
-									 data-range="true"
-									 data-minvalue="15"
-									 data-maxvalue="15"
-									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
-									 data-legendalign="bottom"
-									 class="noticks">
-								</div>
-							</li>
-							<li>
-								<div data-type="highchart"
-									 data-device="Kueche.Wandthermostat_Weather"
-									 data-logdevice="Log.Database"
-									 data-columnspec='Kueche.Wandthermostat_Weather:humidity'
-									 data-linenames="K&uuml;che Luftfeuchtigkeit"
-									 data-linetypes="line"
-									 data-linesteps="true"
-									 data-yaxis="1"
-									 data-xunit="Zeitraum"
-									 data-yunit="Luftfeuchtigkeit"
-									 data-yopposites="true"
-									 data-daysago="7"
-									 data-scroll="true"
-									 data-range="true"
-									 data-minvalue="25"
-									 data-maxvalue="60"
-									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
-									 data-legendalign="bottom"
-									 class="noticks">
-								</div>
-							</li>
-							<li>
-								<div data-type="highchart"
-									 data-device="Kueche.ThermoSensorKuehlschrank"
-									 data-logdevice="Log.Database"
-									 data-columnspec='Kueche.ThermoSensorKuehlschrank:temperature'
-									 data-linenames="K&uuml;che Temperatur K&uuml;hlschrank"
-									 data-linetypes="line"
-									 data-linesteps="true"
-									 data-yaxis="1"
-									 data-xunit="Zeitraum"
-									 data-yunit="Temperatur"
-									 data-yopposites="true"
-									 data-daysago="7"
-									 data-scroll="true"
-									 data-range="true"
-									 data-minvalue="0"
-									 data-maxvalue="15"
-									 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
-									 data-legendalign="bottom"
-									 class="noticks">
-								</div>
-							</li>
-						</ul>
+				<li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
+					<header>K&uuml;che</header>
+					<div class="inline top-space-narrow">
+						<div data-type="swiper" data-height="500px" data-width="700px" class="">
+							<ul>
+								<li>
+									<?ftui-inc="elements/chart.ftui.html" device="Kueche.Wandthermostat_Weather" column-spec="Kueche.Wandthermostat_Weather:temperature" line-names="K&uuml;che Temperatur" yunit="Temperatur" value-min="15" value-max="15" ?>
+								</li>
+								<li>
+									<?ftui-inc="elements/chart.ftui.html" device="Kueche.Wandthermostat_Weather" column-spec="Kueche.Wandthermostat_Weather:humidity" line-names="K&uuml;che Luftfeuchtigkeit" yunit="Luftfeuchtigkeit" value-min="25" value-max="60" ?>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-			</li>
+				</li>
 
-		</ul>
+			</ul>
+		</div>
 	</div>
-	<script type="text/javascript" src="/fhem/pgm2/jquery.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/js/fhem-tablet-ui.js"></script>
-	<script type="text/javascript" src="fhem-frontend.js"></script>
+	<?ftui-inc="layout/before-end-body.ftui.html" ?>
 </body>
 </html>

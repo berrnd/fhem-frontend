@@ -1,0 +1,21 @@
+<?ftui-header="camera-view" ?>
+
+<div class="cell top-space">
+	<div data-type="label" class="cell bigger-font"><?ftui-key=headline ?></div>
+	<div data-type="image"
+		 data-device="<?ftui-key=device ?>"
+		 data-get="last"
+		 data-path="/fhem/snapshots/"
+		 data-size="100%"
+		 data-refresh="1"
+		 class="nocache">
+	</div>
+
+	<script>
+		$(function () {
+			setInterval(function () {
+				ftui.setFhemStatus('get <?ftui-key=device ?> image');
+			}, 1000);
+		});
+	</script>
+</div>

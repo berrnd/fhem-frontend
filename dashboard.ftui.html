@@ -3,185 +3,39 @@
 <head>
 	<?ftui-inc="layout/head.ftui.html" ?>
 </head>
-<body>
-	<div class="gridster">
-		<ul>
+<body data-page-id="dashboard">
+	<div id="site-wrapper">
+		<div class="gridster">
+			<ul>
 
-			<?ftui-inc="layout/menu.ftui.html" ?>
+				<?ftui-inc="layout/menu.ftui.html" ?>
 
-			<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
-				<header>Klima &Uuml;bersicht</header>
-				<div class="inline top-space-narrow">
-					<div data-type="label" class="cell bottom-space-narrow">Innen</div>
-					<div class="inline">
-						<div data-type="klimatrend"
-							 data-device="Wohnung.Temperatur"
-							 data-get="statTemperatureTendency"
-							 data-refperiod="1"
-							 data-stagnating-color="#AA6900"
-							 data-icon="fa-angle"
-							 data-rising-color="#AD3333"
-							 data-falling-color="#6699FF"
-							 data-highmark="1"
-							 data-highmark-icon="fa-angle-double"
-							 data-highmark-rising-color="#AD3333"
-							 data-highmark-falling-color="#6699FF"
-							 class="large bottom-space-narrow">
-						</div>
-						<div data-type="label"
-							 data-device="Wohnung.Temperatur"
-							 data-get="temperature"
-							 data-limits='[0, 60, 75]'
-							 data-colors='["#AA6900", "#F2F27F", "#AD3333"]'
-							 data-unit="%B0C%0A"
-							 class="bigger bottom-space-narrow">
-						</div>
-						<div data-type="label" class="cell">Temperatur</div>
+				<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
+					<header>Klima &Uuml;bersicht</header>
+					<?ftui-inc="elements/thermo-hygro.ftui.html" temperature-device="Wohnung.Temperatur" humidity-device="Wohnung.Luftfeuchte" headline="Innen" ?>
+					<?ftui-inc="elements/thermo-hygro.ftui.html" temperature-device="Aussen.ThermoHygroSensor" humidity-device="Aussen.ThermoHygroSensor" headline="Au&szlig;en" temperature-data-limits="[5, 12, 25]" humidity-data-limits="[0, 25, 70]" ?>
+				</li>
+
+				<li data-row="4" data-col="2" data-sizex="2" data-sizey="2">
+					<header>Pr&auml;senz &Uuml;bersicht</header>
+					<?ftui-inc="widgets/presence.ftui.html" ?>
+				</li>
+
+				<li data-row="1" data-col="3" data-sizex="2" data-sizey="2">
+					<header>Workflows</header>
+					<div class="inline top-space-narrow">
+						<?ftui-inc="elements/command-button.ftui.html" cmd="set Macro.Workflows GoingToBed" text="Going to bed" ?>
+						<?ftui-inc="elements/command-button.ftui.html" cmd="set Macro.Rollaeden AlleAufGriffposition" text="Roll&auml;den auf Griffposition" ?>
 					</div>
+				</li>
 
-					<div class="inline">
-						<div data-type="klimatrend"
-							 data-device="Wohnung.Luftfeuchte"
-							 data-get="statHumidityTendency"
-							 data-refperiod="1"
-							 data-stagnating-color="#AA6900"
-							 data-icon="fa-angle"
-							 data-rising-color="#AD3333"
-							 data-falling-color="#6699FF"
-							 data-highmark="5"
-							 data-highmark-icon="fa-angle-double"
-							 data-highmark-rising-color="#AD3333"
-							 data-highmark-falling-color="#6699FF"
-							 class="large bottom-space-narrow">
-						</div>
-						<div data-type="label"
-							 data-device="Wohnung.Luftfeuchte"
-							 data-get="humidity"
-							 data-limits='[0,40,60]'
-							 data-colors='["#bb6242","#aa6900","#bb6242"]'
-							 data-unit="%"
-							 class="bigger bottom-space-narrow">
-						</div>
-						<div data-type="label" class="cell">Luftfeuchte</div>
-					</div>
-				</div>
+				<li data-row="1" data-col="4" data-sizex="2" data-sizey="2">
+					<header>Ger&auml;te-Schnellzugriff</header>
+					<?ftui-inc="widgets/wifi-control.ftui.html" ?>
+				</li>
 
-				<div class="inline top-space">
-					<div data-type="label" class="cell bottom-space-narrow">Au&szlig;en</div>
-					<div class="inline">
-						<div data-type="klimatrend"
-							 data-device="Aussen.ThermoHygroSensor"
-							 data-get="statTemperatureTendency"
-							 data-refperiod="1"
-							 data-stagnating-color="#AA6900"
-							 data-icon="fa-angle"
-							 data-rising-color="#AD3333"
-							 data-falling-color="#6699FF"
-							 data-highmark="1"
-							 data-highmark-icon="fa-angle-double"
-							 data-highmark-rising-color="#AD3333"
-							 data-highmark-falling-color="#6699FF"
-							 class="large bottom-space-narrow">
-						</div>
-						<div data-type="label"
-							 data-device="Aussen.ThermoHygroSensor"
-							 data-get="temperature"
-							 data-limits='[0, 60, 75]'
-							 data-colors='["#AA6900", "#F2F27F", "#AD3333"]'
-							 data-unit="%B0C%0A"
-							 class="bigger bottom-space-narrow">
-						</div>
-						<div data-type="label" class="cell">Temperatur</div>
-					</div>
-
-					<div class="inline">
-						<div data-type="klimatrend"
-							 data-device="Aussen.ThermoHygroSensor"
-							 data-get="statHumidityTendency"
-							 data-refperiod="1"
-							 data-stagnating-color="#AA6900"
-							 data-icon="fa-angle"
-							 data-rising-color="#AD3333"
-							 data-falling-color="#6699FF"
-							 data-highmark="5"
-							 data-highmark-icon="fa-angle-double"
-							 data-highmark-rising-color="#AD3333"
-							 data-highmark-falling-color="#6699FF"
-							 class="large bottom-space-narrow">
-						</div>
-						<div data-type="label"
-							 data-device="Aussen.ThermoHygroSensor"
-							 data-fix="0"
-							 data-part="4"
-							 data-limits='[0,40,60]'
-							 data-colors='["#bb6242","#aa6900","#bb6242"]'
-							 data-unit="%"
-							 class="bigger bottom-space-narrow">
-						</div>
-						<div data-type="label" class="cell">Luftfeuchte</div>
-					</div>
-				</div>
-			</li>
-
-			<li data-row="4" data-col="2" data-sizex="2" data-sizey="1">
-				<header>Pr&auml;senz &Uuml;bersicht</header>
-				<div class="inline top-space-narrow">
-					<div class="inline">
-						<div data-type="label"
-							 data-device="Presence.BerndBestel"
-							 class="cell">
-						</div>
-						<div data-type="label"
-							 data-device="Presence.BerndBestel.BusyState"
-							 class="cell">
-						</div>
-						<div data-type="label"
-							 data-device="Presence.BerndBestel.WorkingState"
-							 class="cell">
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li data-row="1" data-col="3" data-sizex="2" data-sizey="2">
-				<header>Shortcuts</header>
-				<div class="inline top-space-narrow">
-					<?ftui-inc="elements/link-button.ftui.html" cmd="set Macro.Workflows GoingToBed" text="Going to bed" ?>
-					<?ftui-inc="elements/link-button.ftui.html" cmd="set Macro.Rollaeden AlleAufGriffposition" text="Roll&auml;den auf Griffposition" ?>
-				</div>
-			</li>
-
-			<li data-row="1" data-col="4" data-sizex="2" data-sizey="2">
-				<header>Netzwerk</header>
-				<div class="inline top-space-narrow">
-					<div data-type="label" class="cell">WLAN</div>
-					<div data-type="switch"
-						 data-device="Flur.FritzBox"
-						 data-get="box_wlan_2.4GHz"
-						 data-set-on="wlan on"
-						 data-set-off="wlan off"
-						 data-get-on="on"
-						 data-get-off="off"
-						 data-icon="fa-power-off"
-						 data-on-background-color="#32A054"
-						 data-off-background-color="#AD3333">
-					</div>
-					<div data-type="label" class="cell top-space">G&auml;ste WLAN</div>
-					<div data-type="switch"
-						 data-device="Flur.FritzBox"
-						 data-get="box_guestWlan"
-						 data-set-on="guestWlan on"
-						 data-set-off="guestWlan off"
-						 data-get-on="on"
-						 data-get-off="off"
-						 data-icon="fa-power-off"
-						 data-on-background-color="#32A054"
-						 data-off-background-color="#AD3333">
-					</div>
-				</div>
-			</li>
-
-		</ul>
+			</ul>
+		</div>
 	</div>
 	<?ftui-inc="layout/before-end-body.ftui.html" ?>
 </body>

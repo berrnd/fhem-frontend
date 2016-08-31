@@ -3,44 +3,24 @@
 <head>
 	<?ftui-inc="layout/head.ftui.html" ?>
 </head>
-<body>
-	<div class="gridster">
-		<ul>
+<body data-page-id="media">
+	<div id="site-wrapper">
+		<div class="gridster">
+			<ul>
 
-			<?ftui-inc="layout/menu.ftui.html" ?>
+				<?ftui-inc="layout/menu.ftui.html" ?>
 
-			<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
-				<header>Flur</header>
-				<div class="inline top-space">
-					<div data-type="switch"
-						 data-device="Flur.Mpd"
-						 data-get="state"
-						 data-set-on="play"
-						 data-set-off="stop"
-						 data-get-on="play"
-						 data-get-off="stop"
-						 data-icon="fa-power-off"
-						 data-on-background-color="#32A054"
-						 data-off-background-color="#AD3333">
+				<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
+					<header>Flur</header>
+					<div class="inline top-space">
+						<?ftui-inc="elements/on-off-button.ftui.html" device="Flur.Mpd" on-cmd="play" off-cmd="stop" on-reading-value="play" off-reading-value="stop" headline="Spotify via Mopidy" ?>
+						<?ftui-inc="elements/volume-control.ftui.html" device="Flur.Mpd" ?>
 					</div>
-					<div data-type="volume"
-						 data-device="Flur.Mpd"
-						 data-min="0"
-						 data-max="100"
-						 data-tickstep="1"
-						 data-get="volume"
-						 data-set="volume"
-						 class="small cell">
-					</div>
-				</div>
-			</li>
+				</li>
 
-		</ul>
+			</ul>
+		</div>
 	</div>
-	<script type="text/javascript" src="/fhem/pgm2/jquery.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.toast.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/lib/jquery.gridster.min.js"></script>
-	<script type="text/javascript" src="vendor_unmanaged/fhem-tablet-ui/www/tablet_eval/js/fhem-tablet-ui.js"></script>
-	<script type="text/javascript" src="fhem-frontend.js"></script>
+	<?ftui-inc="layout/before-end-body.ftui.html" ?>
 </body>
 </html>
