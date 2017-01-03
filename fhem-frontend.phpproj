@@ -17,6 +17,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="composer.json" />
     <Content Include="elements\chart.ftui.html" />
     <Content Include="elements\camera-view.ftui.html" />
     <Content Include="elements\volume-control.ftui.html" />

@@ -1,6 +1,6 @@
 ﻿body
 {
-	font-family: 'Lato', sans-serif !important;
+	font-family: 'Open Sans', sans-serif !important;
 }
 
 .top-space-narrow
@@ -113,9 +113,10 @@
 	font-size: 1.2em;
 }
 
-#site-wrapper {
+#site-wrapper
+{
 	width: 1200px;
-	height: 620px;
+	height: 645px;
 	border: solid;
 	border-color: rgb(140, 140, 140);
 	margin: auto;
