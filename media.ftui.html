@@ -10,11 +10,17 @@
 
 				<?ftui-inc="layout/menu.ftui.html" ?>
 
-				<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
-					<header>Flur</header>
+				<li data-row="1" data-col="2" data-sizex="3" data-sizey="4">
+					<header>Flur Spotify Player</header>
 					<div class="inline top-space">
-						<?ftui-inc="elements/on-off-button.ftui.html" device="Flur.Mpd" on-cmd="play" off-cmd="stop" on-reading-value="play" off-reading-value="stop" headline="Spotify via Mopidy" ?>
-						<?ftui-inc="elements/volume-control.ftui.html" device="Flur.Mpd" ?>
+						<?ftui-inc="elements/spotify-player-control.ftui.html" device="Flur.Spotify" ?>
+					</div>
+				</li>
+				
+				<li data-row="1" data-col="3" data-sizex="3" data-sizey="4">
+					<header>Flur Spotify Playlists</header>
+					<div class="inline top-space">
+						<?ftui-inc="elements/spotify-playlists-control.ftui.html" device="Flur.Spotify" ?>
 					</div>
 				</li>
 
