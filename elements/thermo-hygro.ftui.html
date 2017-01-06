@@ -1,36 +1,31 @@
-<?ftui-header="thermo-hygro" temperature-data-limits="[17, 19, 23]" humidity-data-limits="[0, 40, 65]" ?>
+<?ftui-header="thermo-hygro" temperature-data-limits="[0, 19, 23]" humidity-data-limits="[0, 30, 60]" ?>
 
 <div class="row inline">
-	<div data-type="label" class="large top-space"><?ftui-key=headline ?></div>
-	<div id="temperature-<?ftui-key=temperature-device ?>" class="inline">
+	<div id="thermo-hygro-headline-<?ftui-key=temperature-device ?><?ftui-key=temperature-device ?>"
+		data-type="label"
+		class="large top-space">
+		<?ftui-key=headline ?>
+	</div>
+	<div id="temperature-<?ftui-key=temperature-device ?>" class="inline right-space">
 		<div data-type="klimatrend"
 			 data-device="<?ftui-key=temperature-device ?>"
 			 data-get="statTemperatureTendency"
-			 data-refperiod="1"
-			 data-stagnating-color="rgb(82, 181, 75)"
-			 data-icon="fa-angle"
-			 data-rising-color="rgb(207, 78, 43)"
-			 data-falling-color="rgb(2, 136, 209)"
-			 data-highmark="1"
-			 data-highmark-icon="fa-angle-double"
-			 data-highmark-rising-color="rgb(207, 78, 43)"
-			 data-highmark-falling-color="rgb(2, 136, 209)"
 			 class="large narrow">
 		</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=temperature-device ?>"
 			 data-get="temperature"
 			 data-limits='<?ftui-key=temperature-data-limits ?>'
-			 data-colors='["rgb(2, 136, 209)", "rgb(82, 181, 75)", "rgb(207, 78, 43)"]'
+			 data-colors='["#337ab7", "#32a054", "#ad3333"]'
 			 data-unit="%B0C%0A"
-			 class="bigger narrow">
+			 class="bigger">
 		</div>
 		<div data-type="label" class="narrow small">Temperatur</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=temperature-device ?>"
 			 data-get="statTemperatureTendency"
 			 data-part="2"
-			 class="narrow small">
+			 class="small">
 		</div>
 	</div>
 
@@ -38,31 +33,22 @@
 		<div data-type="klimatrend"
 			 data-device="<?ftui-key=humidity-device ?>"
 			 data-get="statHumidityTendency"
-			 data-refperiod="1"
-			 data-stagnating-color="rgb(82, 181, 75)"
-			 data-icon="fa-angle"
-			 data-rising-color="rgb(207, 78, 43)"
-			 data-falling-color="rgb(2, 136, 209)"
-			 data-highmark="5"
-			 data-highmark-icon="fa-angle-double"
-			 data-highmark-rising-color="rgb(207, 78, 43)"
-			 data-highmark-falling-color="rgb(2, 136, 209)"
 			 class="large narrow">
 		</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=humidity-device ?>"
 			 data-get="humidity"
 			 data-limits='<?ftui-key=humidity-data-limits ?>'
-			 data-colors='["rgb(207, 78, 43)", "rgb(82, 181, 75)", "rgb(207, 78, 43)"]'
+			 data-colors='["#ffe066", "#32a054", "#ad3333"]'
 			 data-unit="%"
-			 class="bigger narrow">
+			 class="bigger">
 		</div>
 		<div data-type="label" class="narrow small">Luftfeuchte</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=humidity-device ?>"
 			 data-get="statHumidityTendency"
 			 data-part="2"
-			 class="narrow small">
+			 class="small">
 		</div>
 	</div>
 </div>
@@ -71,5 +57,12 @@
 	if ("<?ftui-key=humidity-device ?>".length === 0)
 	{
 		document.getElementById("humidity-<?ftui-key=temperature-device ?>").className += " hide ";
+	}
+
+	if ("<?ftui-key=headline ?>".length === 0)
+	{
+		document.getElementById("thermo-hygro-headline-<?ftui-key=temperature-device ?><?ftui-key=temperature-device ?>").className += " hide ";
+		document.getElementById("temperature-<?ftui-key=temperature-device ?>").className += " top-space ";
+		document.getElementById("humidity-<?ftui-key=temperature-device ?>").className += " top-space ";
 	}
 </script>

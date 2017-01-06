@@ -13,7 +13,7 @@
 				<li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
 					<header>Klima &Uuml;bersicht</header>
 					<?ftui-inc="elements/thermo-hygro.ftui.html" temperature-device="Wohnung.Temperatur" humidity-device="Wohnung.Luftfeuchte" headline="Innen" ?>
-					<?ftui-inc="elements/thermo-hygro.ftui.html" temperature-device="Aussen.ThermoHygroSensor" humidity-device="Aussen.ThermoHygroSensor" headline="Au&szlig;en" temperature-data-limits="[5, 12, 25]" humidity-data-limits="[0, 25, 70]" ?>
+					<?ftui-inc="elements/thermo-hygro.ftui.html" temperature-device="Aussen.ThermoHygroSensor" humidity-device="Aussen.ThermoHygroSensor" headline="Au&szlig;en" temperature-data-limits="[-40, 9, 25]" humidity-data-limits="[0, 25, 70]" ?>
 				</li>
 
 				<li data-row="4" data-col="2" data-sizex="2" data-sizey="2">
@@ -25,9 +25,9 @@
 					<header>Workflows</header>
 					<div class="inline top-space">
 						<?ftui-inc="elements/command-button.ftui.html" cmd="set Macro.Workflows GoingToBed" text="Going to bed" ?>
-						<?ftui-inc="elements/command-button.ftui.html" cmd="set Macro.Rollaeden AlleOeffnen" text="Roll&auml;den &ouml;ffnen" ?>
-						<?ftui-inc="elements/command-button.ftui.html" cmd="set Macro.Rollaeden AlleSchliessen" text="Roll&auml;den schlie&szlig;en" ?>
-						<?ftui-inc="elements/command-button.ftui.html" cmd="set Macro.Rollaeden AlleAufGriffposition" text="Roll&auml;den auf Griffposition" ?>
+						<?ftui-inc="elements/command-button.ftui.html" cmd="set Wohnung.Rollaeden scene Offen" text="Roll&auml;den &ouml;ffnen" ?>
+						<?ftui-inc="elements/command-button.ftui.html" cmd="set Wohnung.Rollaeden scene Zu" text="Roll&auml;den schlie&szlig;en" ?>
+						<?ftui-inc="elements/command-button.ftui.html" cmd="set Wohnung.Rollaeden scene Griffposition" text="Roll&auml;den auf Griffposition" ?>
 						<?ftui-inc="elements/command-button.ftui.html" cmd="set group=Beleuchtung:FILTER=subGroup=Abendbeleuchtung on" text="Abendbeleuchtung an" ?>
 						<?ftui-inc="elements/command-button.ftui.html" cmd="set group=Beleuchtung:FILTER=subGroup=Abendbeleuchtung off" text="Abendbeleuchtung aus" ?>
 					</div>

@@ -21,3 +21,28 @@
 {
 	display: none;
 }
+
+.menu-item
+{
+	width: 140px;
+	height: 56px;
+	padding-top: 12px;
+}
+
+.menu-item-2x
+{
+	width: 140px;
+	height: 84px;
+	padding-top: 12px;
+}
+
+.discrete-button
+{
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	font: inherit;
+}
