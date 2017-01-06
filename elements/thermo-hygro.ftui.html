@@ -1,7 +1,7 @@
 <?ftui-header="thermo-hygro" temperature-data-limits="[17, 19, 23]" humidity-data-limits="[0, 40, 65]" ?>
 
-<div class="cell">
-	<div data-type="label" class="cell bottom-space-narrow bigger-font"><?ftui-key=headline ?></div>
+<div class="row inline">
+	<div data-type="label" class="large top-space"><?ftui-key=headline ?></div>
 	<div id="temperature-<?ftui-key=temperature-device ?>" class="inline">
 		<div data-type="klimatrend"
 			 data-device="<?ftui-key=temperature-device ?>"
@@ -15,7 +15,7 @@
 			 data-highmark-icon="fa-angle-double"
 			 data-highmark-rising-color="rgb(207, 78, 43)"
 			 data-highmark-falling-color="rgb(2, 136, 209)"
-			 class="large bottom-space-narrow">
+			 class="large narrow">
 		</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=temperature-device ?>"
@@ -23,14 +23,14 @@
 			 data-limits='<?ftui-key=temperature-data-limits ?>'
 			 data-colors='["rgb(2, 136, 209)", "rgb(82, 181, 75)", "rgb(207, 78, 43)"]'
 			 data-unit="%B0C%0A"
-			 class="bigger bottom-space-narrow">
+			 class="bigger narrow">
 		</div>
-		<div data-type="label" class="cell">Temperatur</div>
+		<div data-type="label" class="narrow small">Temperatur</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=temperature-device ?>"
 			 data-get="statTemperatureTendency"
 			 data-part="2"
-			 class="top-space-narrow small">
+			 class="narrow small">
 		</div>
 	</div>
 
@@ -47,7 +47,7 @@
 			 data-highmark-icon="fa-angle-double"
 			 data-highmark-rising-color="rgb(207, 78, 43)"
 			 data-highmark-falling-color="rgb(2, 136, 209)"
-			 class="large bottom-space-narrow">
+			 class="large narrow">
 		</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=humidity-device ?>"
@@ -55,14 +55,14 @@
 			 data-limits='<?ftui-key=humidity-data-limits ?>'
 			 data-colors='["rgb(207, 78, 43)", "rgb(82, 181, 75)", "rgb(207, 78, 43)"]'
 			 data-unit="%"
-			 class="bigger bottom-space-narrow">
+			 class="bigger narrow">
 		</div>
-		<div data-type="label" class="cell">Luftfeuchte</div>
+		<div data-type="label" class="narrow small">Luftfeuchte</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=humidity-device ?>"
 			 data-get="statHumidityTendency"
 			 data-part="2"
-			 class="top-space-narrow small">
+			 class="narrow small">
 		</div>
 	</div>
 </div>

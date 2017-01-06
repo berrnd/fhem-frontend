@@ -1,7 +1,7 @@
 <?ftui-header="chart" xunit="Zeitraum" headline="Verlauf der Umweltwerte" ?>
 
-<div class="cell top-space">
-	<div data-type="label" class="cell bigger-font"><?ftui-key=headline ?></div>
+<div class="row">
+	<div data-type="label" class="large top-space"><?ftui-key=headline ?></div>
 	<div data-type="highchart"
 		 data-device="<?ftui-key=device ?>"
 		 data-logdevice="Log.Database"
@@ -20,6 +20,6 @@
 		 data-maxvalue="<?ftui-key=value-max ?>"
 		 data-tooltip="{series.name}: <b>{point.y:,.1f}</b><br>"
 		 data-legendalign="bottom"
-		 class="noticks">
+		 class="top-space noticks">
 	</div>
 </div>
