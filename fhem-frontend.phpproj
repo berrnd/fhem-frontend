@@ -34,15 +34,6 @@
     <Content Include="layout\before-end-body.ftui.html" />
     <Content Include="layout\menu.ftui.html" />
     <Content Include="layout\head.ftui.html" />
-    <Content Include="room_wohnung.ftui.html" />
-    <Content Include="room_schlafzimmer.ftui.html" />
-    <Content Include="room_arbeitszimmer.ftui.html" />
-    <Content Include="room_kueche.ftui.html" />
-    <Content Include="room_bad.ftui.html" />
-    <Content Include="room_flur.ftui.html" />
-    <Content Include="room_aussen.ftui.html" />
-    <Content Include="room_keller.ftui.html" />
-    <Content Include="room_wohnzimmer.ftui.html" />
     <Content Include="fhem-frontend.css" />
     <Content Include="fhem-frontend.js" />
     <Content Include="dashboard.ftui.html" />
@@ -53,6 +44,7 @@
     <Content Include="network.ftui.html" />
     <Content Include="shutters.ftui.html" />
     <Content Include="windows_doors.ftui.html" />
+    <Content Include="fullscreenwrapper.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="layout\" />

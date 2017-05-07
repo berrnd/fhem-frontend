@@ -3,19 +3,9 @@
 <div class="row inline">
 	<div data-type="label" class="large top-space"><?ftui-key=headline ?></div>
 	<div data-type="image"
-		 data-device="<?ftui-key=device ?>"
-		 data-get="last"
-		 data-url="/fhem/snapshots/<?ftui-key=device ?>_snapshot.jpg"
-		 data-size="100%"
-		 data-refresh="2"
-		 class="top-space nocache">
+		data-device="<?ftui-key=device ?>"
+		data-get="streamurl"
+		data-size="100%"
+		class="top-space nocache">
 	</div>
-
-	<script>
-		$(function () {
-			setInterval(function () {
-				ftui.setFhemStatus("get <?ftui-key=device ?> image");
-			}, 1500);
-		});
-	</script>
 </div>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>fhem-frontend</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<style>
+		html, body {
+			height: 100%;
+			overflow: hidden;
+		}
+
+		iframe {
+			border: 0;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+
+		button {
+			position: absolute;
+			z-index: 2;
+		}
+	</style>
+
+	<script>
+		function toggleFullScreen()
+		{
+			if (fullScreen)
+			{
+				document.mozCancelFullScreen();
+			}
+			else
+			{
+				document.documentElement.mozRequestFullScreen();
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="toggleFullScreen();">Vollbild an/aus</button>
+	<iframe src="dashboard.ftui.html"></iframe>
+</body>
+</html>

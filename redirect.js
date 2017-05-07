@@ -1,1 +1,1 @@
-﻿window.location.href = "/fhem/frontend/dashboard.ftui.html";
+﻿window.location.href = "/fhem/frontend/fullscreenwrapper.html";
