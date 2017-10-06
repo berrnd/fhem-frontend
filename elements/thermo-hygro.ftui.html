@@ -6,11 +6,21 @@
 		class="large top-space">
 		<?ftui-key=headline ?>
 	</div>
+
 	<div id="temperature-<?ftui-key=temperature-device ?>" class="inline right-space">
 		<div data-type="klimatrend"
 			 data-device="<?ftui-key=temperature-device ?>"
 			 data-get="statTemperatureTendency"
-			 class="large narrow">
+			 class="big narrow inline">
+		</div>
+		<div data-type="symbol"
+			 data-device="<?ftui-key=temperature-device ?>"
+			 data-get="moldPreventionTemperatureOk"
+			 data-icon="fa-circle"
+			 data-on-color="#32a054"
+			 data-off-color="#ad3333"
+			 id="mold-prevention-status-temperature-<?ftui-key=temperature-device ?>"
+			 class="mini narrow inline left-narrow mold-prevention-status-<?ftui-key=temperature-device ?>">
 		</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=temperature-device ?>"
@@ -33,7 +43,16 @@
 		<div data-type="klimatrend"
 			 data-device="<?ftui-key=humidity-device ?>"
 			 data-get="statHumidityTendency"
-			 class="large narrow">
+			 class="big narrow inline">
+		</div>
+		<div data-type="symbol"
+			 data-device="<?ftui-key=humidity-device ?>"
+			 data-get="moldPreventionHumidityOk"
+			 data-icon="fa-circle"
+			 data-on-color="#32a054"
+			 data-off-color="#ad3333"
+			 id="mold-prevention-status-humidity-<?ftui-key=humidity-device ?>"
+			 class="mini narrow inline left-narrow">
 		</div>
 		<div data-type="label"
 			 data-device="<?ftui-key=humidity-device ?>"
@@ -54,15 +73,30 @@
 </div>
 
 <script>
-	if ("<?ftui-key=humidity-device ?>".length === 0)
+	$(document).on("initWidgetsDone", function()
 	{
-		document.getElementById("humidity-<?ftui-key=temperature-device ?>").className += " hide ";
-	}
+		if ("<?ftui-key=humidity-device ?>".length === 0)
+		{
+			document.getElementById("humidity-<?ftui-key=temperature-device ?>").className += " hide ";
 
-	if ("<?ftui-key=headline ?>".length === 0)
-	{
-		document.getElementById("thermo-hygro-headline-<?ftui-key=temperature-device ?><?ftui-key=temperature-device ?>").className += " hide ";
-		document.getElementById("temperature-<?ftui-key=temperature-device ?>").className += " top-space ";
-		document.getElementById("humidity-<?ftui-key=temperature-device ?>").className += " top-space ";
-	}
+			if ("<?ftui-key=hide-mold-prevention-status ?>".length !== 0)
+			{
+				document.getElementById("mold-prevention-status-humidity-").className += " hide ";
+			}
+		}
+
+		if ("<?ftui-key=headline ?>".length === 0)
+		{
+			document.getElementById("thermo-hygro-headline-<?ftui-key=temperature-device ?><?ftui-key=temperature-device ?>").className += " hide ";
+			document.getElementById("temperature-<?ftui-key=temperature-device ?>").className += " top-space ";
+			document.getElementById("humidity-<?ftui-key=temperature-device ?>").className += " top-space ";
+		}
+
+		$(".famultibutton").css("margin-top", "-7px");
+
+		if ("<?ftui-key=hide-mold-prevention-status ?>".length !== 0)
+		{
+			document.getElementById("mold-prevention-status-temperature-<?ftui-key=temperature-device ?>").className += " hide ";
+		}
+	});
 </script>
