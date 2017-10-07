@@ -36,8 +36,6 @@
     <Content Include="cameras.ftui.html" />
     <Content Include="climate.ftui.html" />
     <Content Include="lighting.ftui.html" />
-    <Content Include="media.ftui.html" />
-    <Content Include="network.ftui.html" />
     <Content Include="shutters.ftui.html" />
     <Content Include="windows_doors.ftui.html" />
     <Content Include="fullscreenwrapper.html" />

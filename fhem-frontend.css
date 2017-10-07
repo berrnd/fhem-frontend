@@ -15,6 +15,7 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
+	padding-top: 4px;
 }
 
 .hide
@@ -34,15 +35,4 @@
 	width: 149px;
 	height: 84px;
 	padding-top: 17px;
-}
-
-.discrete-button
-{
-	background-color: transparent;
-	background-repeat: no-repeat;
-	border: none;
-	cursor: pointer;
-	overflow: hidden;
-	outline: none;
-	font: inherit;
 }

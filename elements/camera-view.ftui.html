@@ -1,11 +1,21 @@
 <?ftui-header="camera-view" ?>
 
-<div class="row inline">
-	<div data-type="label" class="large top-space"><?ftui-key=headline ?></div>
+<div class="row centered">
+	<div id="camera-headline-<?ftui-key=device ?>" data-type="label" class="large top-space"><?ftui-key=headline ?></div>
 	<div data-type="image"
 		data-device="<?ftui-key=device ?>"
 		data-get="streamurl"
-		data-size="100%"
+		data-size="95%"
 		class="top-space nocache">
 	</div>
 </div>
+
+<script>
+	$(document).on("initWidgetsDone", function()
+	{
+		if ("<?ftui-key=headline ?>".length === 0)
+		{
+			document.getElementById("camera-headline-<?ftui-key=device ?>").className += " hide ";
+		}
+	});
+</script>

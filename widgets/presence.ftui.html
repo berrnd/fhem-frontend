@@ -1,8 +1,8 @@
 <?ftui-header="presence-widget" ?>
 
-<div class="row newline">
+<div class="row">
 
-	<div class="row top-space">
+	<div class="top-space">
 		<div data-type="label" class="large">Anwesenheit</div>
 		<div data-type="label"
 			 data-device="Presence.BerndBestel"
@@ -10,7 +10,7 @@
 		</div>
 	</div>
 
-	<div class="row top-space">
+	<div class="top-space">
 		<div data-type="label" class="large">BusyState</div>
 		<div data-type="label"
 			 data-device="Presence.BerndBestel.BusyState"
@@ -18,7 +18,7 @@
 		</div>
 	</div>
 
-	<div class="row top-space">
+	<div class="top-space">
 		<div data-type="label" class="large">WorkingState</div>
 		<div data-type="label"
 			 data-device="Presence.BerndBestel.WorkingState"
@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<div class="inline top-space">
+	<div class="top-space inline">
 		<?ftui-inc="../elements/command-button.ftui.html" cmd="set Presence.BerndBestel present" text="Home" ?>
 		<?ftui-inc="../elements/command-button.ftui.html" cmd="set Presence.BerndBestel.BusyState normal" text="Wake" ?>
 	</div>
